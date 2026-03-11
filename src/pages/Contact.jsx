@@ -46,7 +46,7 @@ export default function Contact() {
           </div>
           <div className="contact-bar__item">
             <Clock size={20} />
-            <div><strong>Working Hours</strong><span>Monday to Saturday 9am to 5pm <br>Sunday closed</br></span></div>
+            <div><strong>Working Hours</strong><span>Monday to Saturday 9am to 5pm <br /> Sunday closed</span></div>
           </div>
         </div>
       </div>
