@@ -15,8 +15,6 @@ export default function Footer() {
           <p>Crafting extraordinary moments that become timeless memories. Your dream event, our masterpiece.</p>
           <div className="footer__social">
             <a href="https://www.instagram.com/new_ss_evnts_shiva_nalgonda?utm_source=qr&igsh=MWdybzIydmM1bGdsMA==" target="_blank" rel="noreferrer" aria-label="Instagram New SS Events Shiva Nalgonda"><Instagram size={20} /></a>
-            <a href="#" aria-label="Facebook"><Facebook size={20} /></a>
-            <a href="#" aria-label="Youtube"><Youtube size={20} /></a>
           </div>
         </div>
 

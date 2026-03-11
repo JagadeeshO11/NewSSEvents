@@ -107,13 +107,13 @@ export default function Contact() {
 
             {/* Map Placeholder */}
             <div className="contact__map">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3814.322048816474!2d79.2692087!3d17.0568928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb29063d949279%3A0x8bf4b0c3dd5f8927!2sNew%20SS%20flower%20decoration%20and%20event%20management!5e0!3m2!1sen!2sin!4v1773236852150!5m2!1sen!2sin" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen="" 
-                loading="lazy" 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3814.322048816474!2d79.2692087!3d17.0568928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb29063d949279%3A0x8bf4b0c3dd5f8927!2sNew%20SS%20flower%20decoration%20and%20event%20management!5e0!3m2!1sen!2sin!4v1773236852150!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="New SS Events Location"
               ></iframe>
@@ -124,19 +124,9 @@ export default function Contact() {
               <h4>Follow Our Journey</h4>
               <div className="contact__social-links">
                 <a href="https://www.instagram.com/new_ss_evnts_shiva_nalgonda?utm_source=qr&igsh=MWdybzIydmM1bGdsMA==" target="_blank" rel="noreferrer" className="social-link social-link--ig"><Instagram size={22} /><span>New SS Events Shiva Nalgonda</span></a>
-                <a href="#" className="social-link social-link--fb"><Facebook size={22} /><span>Facebook</span></a>
-                <a href="#" className="social-link social-link--yt"><Youtube size={22} /><span>YouTube</span></a>
               </div>
             </div>
 
-            {/* Assurance */}
-            <div className="contact__assurance">
-              <Clock size={20} />
-              <div>
-                <strong>Reliable Response</strong>
-                <p>We value your time. Expect a response from Shivakumar and our team within one business day.</p>
-              </div>
-            </div>
           </motion.div>
         </div>
       </section>
