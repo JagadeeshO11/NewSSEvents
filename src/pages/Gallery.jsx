@@ -1,26 +1,14 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react'
+import { useData } from '../context/DataContext'
 import './Gallery.css'
-
-const photos = [
-  { id:1,  cat:'weddings',   src:'/hero.png',      title:'Royal Garden Wedding' },
-  { id:2,  cat:'birthdays',  src:'/birthday.png',  title:'Golden Glow Birthday' },
-  { id:3,  cat:'corporate',  src:'/corporate.png', title:'Annual Gala Night' },
-  { id:4,  cat:'cultural',   src:'/cultural.png',  title:'Traditional Namkaran' },
-  { id:5,  cat:'weddings',   src:'/hero.png',      title:'Palace Reception' },
-  { id:6,  cat:'birthdays',  src:'/birthday.png',  title:'Surprise Party Setup' },
-  { id:7,  cat:'corporate',  src:'/corporate.png', title:'Product Launch Event' },
-  { id:8,  cat:'cultural',   src:'/cultural.png',  title:'Griha Pravesh Ceremony' },
-  { id:9,  cat:'weddings',   src:'/hero.png',      title:'Beachside Vows' },
-  { id:10, cat:'corporate',  src:'/corporate.png', title:'Tech Conference 2024' },
-  { id:11, cat:'birthdays',  src:'/birthday.png',  title:'Sweet Sixteen Bash' },
-  { id:12, cat:'cultural',   src:'/cultural.png',  title:'Diwali Corporate Gala' },
-]
 
 const tabs = ['all','weddings','birthdays','corporate','cultural']
 
 export default function Gallery() {
+  const { siteData } = useData()
+  const { photos } = siteData
   const [active, setActive] = useState('all')
   const [lightbox, setLightbox] = useState(null)
 

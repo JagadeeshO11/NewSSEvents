@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Star, Users, Calendar, Award, Heart, Building2, Flower2, Cake } from 'lucide-react'
+import { useData } from '../context/DataContext'
 import './Home.css'
 
 const fadeUp = {
@@ -8,21 +9,11 @@ const fadeUp = {
   visible: (i = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.12, duration: 0.7, ease: 'easeOut' } }),
 }
 
-const categories = [
-  { icon: <Heart size={32} />,     label: 'Weddings',   img: '/hero.png',      desc: 'Fairy-tale ceremonies & receptions crafted with love.' },
-  { icon: <Cake size={32} />,      label: 'Birthdays',  img: '/birthday.png',  desc: 'Vibrant parties that celebrate milestones in style.' },
-  { icon: <Building2 size={32} />, label: 'Corporate',  img: '/corporate.png', desc: 'Professional events that leave lasting impressions.' },
-  { icon: <Flower2 size={32} />,   label: 'Cultural',   img: '/cultural.png',  desc: 'Rich ceremonies honoring traditions & heritage.' },
-]
-
-const stats = [
-  { value: '10+', label: 'Years Experience', icon: <Award size={24} /> },
-  { value: '500+', label: 'Events Curated',   icon: <Calendar size={24} /> },
-  { value: '98%', label: 'Happy Clients',     icon: <Star size={24} /> },
-  { value: '50+', label: 'Expert Team',       icon: <Users size={24} /> },
-]
+const IconMap = { ArrowRight, Star, Users, Calendar, Award, Heart, Building2, Flower2, Cake }
 
 export default function Home() {
+  const { siteData } = useData()
+  const { categories, stats } = siteData
   return (
     <div className="page-wrapper">
       {/* ── Hero ──────────────────────────────────────── */}
@@ -60,7 +51,9 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
             >
-              <div className="stats-bar__icon">{s.icon}</div>
+              <div className="stats-bar__icon">
+                {IconMap[s.icon] ? <span className="icon-wrapper" style={{color: 'var(--color-gold)'}}>{(IconMap[s.icon])({size: 24})}</span> : <Award size={24} />}
+              </div>
               <div>
                 <div className="stats-bar__value">{s.value}</div>
                 <div className="stats-bar__label">{s.label}</div>
@@ -126,7 +119,9 @@ export default function Home() {
                   <div className="cat-card__overlay" />
                 </div>
                 <div className="cat-card__body">
-                  <div className="cat-card__icon">{cat.icon}</div>
+                  <div className="cat-card__icon">
+                    {IconMap[cat.icon] ? (IconMap[cat.icon])({size: 32}) : <Heart size={32} />}
+                  </div>
                   <h3>{cat.label}</h3>
                   <p>{cat.desc}</p>
                   <Link to="/services" className="cat-card__link">Learn More <ArrowRight size={16} /></Link>

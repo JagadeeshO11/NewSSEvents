@@ -1,46 +1,14 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Heart, Cake, Building2, Flower2, Check, ArrowRight } from 'lucide-react'
+import { useData } from '../context/DataContext'
 import './Services.css'
 
-const services = [
-  {
-    icon: <Heart size={36} />,
-    title: 'Weddings & Celebrations',
-    img: '/hero.png',
-    desc: 'We orchestrate wedding ceremonies and receptions that reflect your unique love story — from intimate garden weddings to grand palace banquets.',
-    features: ['Custom theme & décor design', 'Venue sourcing & management', 'Catering coordination', 'Photographer & entertainment', 'Honeymoon tie-ups'],
-  },
-  {
-    icon: <Cake size={36} />,
-    title: 'Birthdays & Parties',
-    img: '/birthday.png',
-    desc: 'Whether a sweet-sixteen, a milestone 50th, or an extravagant themed bash — we turn every birthday into a spectacular memory.',
-    features: ['Themed decoration setups', 'Custom cakes & dessert bars', 'Entertainment & games', 'Surprise element planning', 'Personalized return gifts'],
-  },
-  {
-    icon: <Building2 size={36} />,
-    title: 'Corporate Events',
-    img: '/corporate.png',
-    desc: 'From product launches to annual galas, we bring professionalism, precision, and creative flair to every corporate gathering.',
-    features: ['Conference & seminar planning', 'Brand activations', 'Award night ceremonies', 'Team-building experiences', 'AV & tech coordination'],
-  },
-  {
-    icon: <Flower2 size={36} />,
-    title: 'Cultural Ceremonies',
-    img: '/cultural.png',
-    desc: 'We honor your heritage with meticulous attention to traditional detail — Namkaran, Mundan, Griha Pravesh, Diwali galas, and more.',
-    features: ['Traditional ritual coordination', 'Authentic décor sourcing', 'Priest & pandit booking', 'Cultural catering menus', 'Photography & videography'],
-  },
-]
-
-const packages = [
-  { name: 'Silver', price: '₹50K onwards', features: ['Up to 50 guests', 'Basic décor setup', 'Event coordinator', 'Day-of support'] },
-  { name: 'Gold',   price: '₹1.2L onwards', features: ['Up to 150 guests', 'Premium décor', 'Full planning support', 'Photography', 'Catering coordination'], highlight: true },
-  { name: 'Platinum', price: '₹3L onwards', features: ['Unlimited guests', 'Luxury bespoke design', 'Dedicated team', 'Full vendor management', 'Post-event cleanup'] },
-]
+const IconMap = { Heart, Cake, Building2, Flower2, Check, ArrowRight }
 
 export default function Services() {
+  const { siteData } = useData()
+  const { services, packages } = siteData
   return (
     <div className="page-wrapper">
       {/* Page Hero */}
@@ -62,7 +30,9 @@ export default function Services() {
               viewport={{once:true}} transition={{duration:0.75}}>
               <div className="svc-item__img">
                 <img src={svc.img} alt={svc.title} />
-                <div className="svc-item__icon">{svc.icon}</div>
+                <div className="svc-item__icon">
+                  {IconMap[svc.icon] ? (IconMap[svc.icon])({size: 36}) : <Heart size={36} />}
+                </div>
               </div>
               <div className="svc-item__body">
                 <h2>{svc.title}</h2>

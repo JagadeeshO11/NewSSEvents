@@ -8,6 +8,7 @@ import About from './pages/About'
 import Services from './pages/Services'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
+import { DataProvider } from './context/DataContext'
 import './index.css'
 
 function AnimatedRoutes() {
@@ -27,11 +28,13 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Navbar />
-      <AnimatedRoutes />
-      <Footer />
-    </BrowserRouter>
+    <DataProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Navbar />
+        <AnimatedRoutes />
+        <Footer />
+      </BrowserRouter>
+    </DataProvider>
   )
 }
