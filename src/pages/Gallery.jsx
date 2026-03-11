@@ -4,7 +4,7 @@ import { X } from 'lucide-react'
 import { useData } from '../context/DataContext'
 import './Gallery.css'
 
-const tabs = ['all','weddings','birthdays','corporate','cultural']
+const tabs = ['all','weddings','birthdays','corporate','cultural', 'family', 'festive']
 
 export default function Gallery() {
   const { siteData } = useData()

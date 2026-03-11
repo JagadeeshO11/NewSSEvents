@@ -10,6 +10,8 @@ export const initialData = {
     { id: 2, icon: 'Cake', label: 'Birthdays', img: '/birthday.png', desc: 'Vibrant parties that celebrate milestones in style.' },
     { id: 3, icon: 'Building2', label: 'Corporate', img: '/corporate.png', desc: 'Professional events that leave lasting impressions.' },
     { id: 4, icon: 'Flower2', label: 'Cultural', img: '/cultural.png', desc: 'Rich ceremonies honoring traditions & heritage.' },
+    { id: 5, icon: 'Users', label: 'Family', img: '/hero.png', desc: 'Heartwarming baby showers & naming ceremonies.' },
+    { id: 6, icon: 'Star', label: 'Festive', img: '/cultural.png', desc: 'Vibrant community festivals & ethnic celebrations.' },
   ],
   services: [
     {
@@ -44,6 +46,22 @@ export const initialData = {
       desc: 'We honor your heritage with meticulous attention to traditional detail — Namkaran, Mundan, Griha Pravesh, Diwali galas, and more.',
       features: ['Traditional ritual coordination', 'Authentic décor sourcing', 'Priest & pandit booking', 'Cultural catering menus', 'Photography & videography'],
     },
+    {
+      id: 5,
+      icon: 'Heart',
+      title: 'Baby Showers & Naming',
+      img: '/hero.png',
+      desc: 'Celebrate the newest addition to your family with enchanting cradle ceremonies and whimsical baby shower themes.',
+      features: ['Custom Uyyala (cradle) decor', 'Themed name reveal setups', 'Soft floral & balloon backdrops', 'Catering & guest management'],
+    },
+    {
+      id: 6,
+      icon: 'Star',
+      title: 'Festive & Community',
+      img: '/cultural.png',
+      desc: 'Bringing communities together with grand festive decorations and traditional stage setups for local celebrations.',
+      features: ['Grand festival stage design', 'Ethnic lighting & props', 'Large-scale floral installations', 'Community event logistics'],
+    },
   ],
   packages: [
     { id: 1, name: 'Silver', price: '₹50K onwards', features: ['Up to 50 guests', 'Basic décor setup', 'Event coordinator', 'Day-of support'] },
@@ -64,5 +82,8 @@ export const initialData = {
     { id: 11, cat: 'birthdays', src: '/birthday.png', title: 'Sweet Sixteen Bash' },
     { id: 12, cat: 'cultural', src: '/cultural.png', title: 'Diwali Corporate Gala' },
     { id: 13, cat: 'weddings', src: '/wedding_luxury.png', title: 'Luxury Wedding Reception' },
+    { id: 14, cat: 'weddings', src: 'https://i.pinimg.com/736x/59/85/0e/59850e15e523bf8c6c2345505efb6f1a.jpg', title: 'Floral Stage Inspiration' },
+    { id: 15, cat: 'family', src: 'https://i.pinimg.com/736x/fa/e5/99/fae5990ff42de85a2582d1d27c319022.jpg', title: 'Traditional Naming Ceremony' },
+    { id: 16, cat: 'festive', src: 'https://i.pinimg.com/736x/e7/e1/ad/e7e1ad500910acfdfafa0ab6a813c841.jpg', title: 'Ethnic Festival Decor' },
   ],
 }
