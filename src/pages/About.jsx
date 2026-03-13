@@ -23,7 +23,7 @@ export default function About() {
   return (
     <div className="page-wrapper about">
       {/* Page Hero */}
-      <section className="page-hero">
+      <section className="page-hero page-hero--about">
         <div className="page-hero__overlay" />
         <motion.div className="container page-hero__content" initial="hidden" animate="visible" variants={fadeUp}>
           <span className="tag">Our Story</span>

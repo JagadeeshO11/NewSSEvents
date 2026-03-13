@@ -28,8 +28,8 @@
 .page-hero__content {
   position: relative;
   z-index: 2;
-  padding-top: 7rem;
-  padding-bottom: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 }
 
 .page-hero__content .tag { margin-bottom: 1.2rem; }

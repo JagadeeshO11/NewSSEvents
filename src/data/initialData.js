@@ -85,5 +85,6 @@ export const initialData = {
     { id: 14, cat: 'weddings', src: 'https://i.pinimg.com/736x/59/85/0e/59850e15e523bf8c6c2345505efb6f1a.jpg', title: 'Floral Stage Inspiration' },
     { id: 15, cat: 'family', src: 'https://i.pinimg.com/736x/fa/e5/99/fae5990ff42de85a2582d1d27c319022.jpg', title: 'Traditional Naming Ceremony' },
     { id: 16, cat: 'festive', src: 'https://i.pinimg.com/736x/e7/e1/ad/e7e1ad500910acfdfafa0ab6a813c841.jpg', title: 'Ethnic Festival Decor' },
+    { id: 17, cat: 'weddings', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWkhhDXsSaEPQVP4e4K6O65y6NSTLZ8A6hOQ&s', title: 'Elegant Wedding Decor' },
   ],
 }
