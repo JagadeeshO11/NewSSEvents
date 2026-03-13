@@ -5,12 +5,12 @@ const DataContext = createContext()
 
 export function DataProvider({ children }) {
   const [siteData, setSiteData] = useState(() => {
-    const saved = localStorage.getItem('new_ss_events_data')
+    const saved = localStorage.getItem('new_ss_events_data_v2')
     return saved ? JSON.parse(saved) : initialData
   })
 
   useEffect(() => {
-    localStorage.setItem('new_ss_events_data', JSON.stringify(siteData))
+    localStorage.setItem('new_ss_events_data_v2', JSON.stringify(siteData))
   }, [siteData])
 
   const updateData = (newData) => {

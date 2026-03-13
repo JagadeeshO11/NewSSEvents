@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Heart, Cake, Building2, Flower2, Check, ArrowRight } from 'lucide-react'
+import { Heart, Cake, Building2, Flower2, Check, ArrowRight, Star, Users } from 'lucide-react'
 import { useData } from '../context/DataContext'
 import './Services.css'
 
-const IconMap = { Heart, Cake, Building2, Flower2, Check, ArrowRight }
+const IconMap = { Heart, Cake, Building2, Flower2, Check, ArrowRight, Star, Users }
 
 export default function Services() {
   const { siteData } = useData()
@@ -31,7 +31,10 @@ export default function Services() {
               <div className="svc-item__img">
                 <img src={svc.img} alt={svc.title} />
                 <div className="svc-item__icon">
-                  {IconMap[svc.icon] ? (IconMap[svc.icon])({size: 36}) : <Heart size={36} />}
+                  {(() => {
+                    const Icon = IconMap[svc.icon] || Heart
+                    return <Icon size={36} />
+                  })()}
                 </div>
               </div>
               <div className="svc-item__body">

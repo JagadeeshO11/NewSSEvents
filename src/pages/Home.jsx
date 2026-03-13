@@ -52,7 +52,14 @@ export default function Home() {
               transition={{ delay: i * 0.1, duration: 0.6 }}
             >
               <div className="stats-bar__icon">
-                {IconMap[s.icon] ? <span className="icon-wrapper" style={{color: 'var(--color-gold)'}}>{(IconMap[s.icon])({size: 24})}</span> : <Award size={24} />}
+                {(() => {
+                  const Icon = IconMap[s.icon] || Award
+                  return (
+                    <span className="icon-wrapper" style={{color: 'var(--color-gold)'}}>
+                      <Icon size={24} />
+                    </span>
+                  )
+                })()}
               </div>
               <div>
                 <div className="stats-bar__value">{s.value}</div>
@@ -120,7 +127,10 @@ export default function Home() {
                 </div>
                 <div className="cat-card__body">
                   <div className="cat-card__icon">
-                    {IconMap[cat.icon] ? (IconMap[cat.icon])({size: 32}) : <Heart size={32} />}
+                    {(() => {
+                      const Icon = IconMap[cat.icon] || Heart
+                      return <Icon size={32} />
+                    })()}
                   </div>
                   <h3>{cat.label}</h3>
                   <p>{cat.desc}</p>
