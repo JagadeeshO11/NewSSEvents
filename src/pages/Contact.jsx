@@ -12,7 +12,7 @@ export default function Contact() {
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
   const handleSubmit = e => {
     e.preventDefault()
-    
+
     // Construct WhatsApp message
     const waText = `Hello New SS Events!
 Name: ${form.name}
@@ -21,7 +21,7 @@ Phone: ${form.phone}
 Event Type: ${form.eventType}
 Message: ${form.message}`
 
-    const waUrl = `https://wa.me/919502071899?text=${encodeURIComponent(waText)}`
+    const waUrl = `https://wa.me/919502071898?text=${encodeURIComponent(waText)}`
     window.open(waUrl, '_blank')
 
     setSent(true)
