@@ -12,6 +12,18 @@ export default function Contact() {
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
   const handleSubmit = e => {
     e.preventDefault()
+    
+    // Construct WhatsApp message
+    const waText = `Hello New SS Events!
+Name: ${form.name}
+Email: ${form.email}
+Phone: ${form.phone}
+Event Type: ${form.eventType}
+Message: ${form.message}`
+
+    const waUrl = `https://wa.me/919502071899?text=${encodeURIComponent(waText)}`
+    window.open(waUrl, '_blank')
+
     setSent(true)
     setTimeout(() => setSent(false), 4000)
     setForm({ name: '', email: '', phone: '', eventType: '', message: '' })
@@ -42,11 +54,11 @@ export default function Contact() {
           </a>
           <div className="contact-bar__item">
             <MapPin size={20} />
-            <div><strong>Our Office</strong><span>Gandhi Putala Road, Nalgonda</span></div>
+            <div><strong>Our Office</strong><span>Clock tower Nalgonda </span></div>
           </div>
           <div className="contact-bar__item">
             <Clock size={20} />
-            <div><strong>Working Hours</strong><span>Monday to Saturday 9am to 5pm <br /> Sunday closed</span></div>
+            <div><strong>Working Hours</strong><span>Monday to Saturday 9AM to 5PM <br /> Sunday closed</span></div>
           </div>
         </div>
       </div>
