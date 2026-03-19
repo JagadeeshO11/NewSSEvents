@@ -42,7 +42,7 @@ export default function Footer() {
         <div className="footer__col">
           <h4>Get In Touch</h4>
           <ul className="footer__contact-list">
-            <li><Phone size={16} /><a href="tel:+919502071899">+91 95020 71899</a></li>
+            <li><Phone size={16} /><a href="tel:+919502071893">+91 95020 71893</a></li>
             <li><Mail size={16} /><a href="mailto:shivakumarb@gmail.com">shivakumarb@gmail.com</a></li>
             <li><MapPin size={16} /><span>Gandhi Putala Road, Nalgonda</span></li>
             <li><Clock size={16} /><span>mon to sat 9am to 5pm sun closed</span></li>
