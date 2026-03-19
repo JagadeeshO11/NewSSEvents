@@ -34,7 +34,7 @@ export default function Contact() {
         <div className="container contact-bar__grid">
           <a href="tel:+919502071899" className="contact-bar__item">
             <Phone size={20} />
-            <div><strong>Call Us</strong><span>+91 95020 71899</span></div>
+            <div><strong>Call Us</strong><span>+91 95020 71893</span></div>
           </a>
           <a href="mailto:shivakumarb@gmail.com" className="contact-bar__item">
             <Mail size={20} />
@@ -108,7 +108,7 @@ export default function Contact() {
             {/* Map Placeholder */}
             <div className="contact__map">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3814.322048816474!2d79.2692087!3d17.0568928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb29063d949279%3A0x8bf4b0c3dd5f8927!2sNew%20SS%20flower%20decoration%20and%20event%20management!5e0!3m2!1sen!2sin!4v1773236852150!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1907.171028100114!2d79.26553406946131!3d17.05591324561852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb29063d949279%3A0x8bf4b0c3dd5f8927!2sNew%20SS%20flower%20decoration%20and%20event%20management!5e0!3m2!1sen!2sin!4v1773909745764!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
